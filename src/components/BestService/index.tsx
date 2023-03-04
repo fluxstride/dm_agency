@@ -10,7 +10,7 @@ const BestServices = () => {
             We present the best digital marketing service carried out
             professionally
           </p>
-          <img src="src/assets/best_services.png" alt="" className="w-full" />
+          <img src="/assets/best_services.png" alt="" className="w-full" />
         </div>
       </div>
     </div>

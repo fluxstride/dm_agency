@@ -27,9 +27,9 @@ const Hero = () => {
         </div>
       </div>
       <div className="grid sm:grid-cols-3 gap-5  lg:gap-10 mt-16">
-        <img src="src/assets/hero_image_1.png" alt="" className=" w-full" />
-        <img src="src/assets/hero_image_2.png" alt="" className=" w-full" />
-        <img src="src/assets/hero_image_3.png" alt="" className=" w-full" />
+        <img src="/assets/hero_image_1.png" alt="" className=" w-full" />
+        <img src="/assets/hero_image_2.png" alt="" className=" w-full" />
+        <img src="/assets/hero_image_3.png" alt="" className=" w-full" />
       </div>
 
       <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-10 mt-12 mb-40">
