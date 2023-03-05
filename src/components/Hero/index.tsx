@@ -6,7 +6,7 @@ const Hero = () => {
           You’ve Got A Business, We Have Got Brilliant Minds
         </h1>
         <div className="col-span-2">
-          <p className="text-gray md:text-lg mb-12 text-gray-200">
+          <p className="text-gray md:text-lg mb-12 text-gray-300">
             Founded in 2022 by a team of professional designers, developers &
             creative thinkers
           </p>

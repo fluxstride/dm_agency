@@ -11,7 +11,9 @@ const Nav = ({
 
   return (
     <div className="px-5 xl:px-24 container  mx-auto  flex justify-between py-8 items-center">
-      <img src="/assets/logo.svg" alt="" />
+      <a href="/">
+        <img src="/assets/logo.svg" alt="logo" />
+      </a>
       <span
         className="p-.5 px-2 cursor-pointer"
         onClick={() => setIsMenuOpen((prev) => !prev)}
