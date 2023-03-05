@@ -39,7 +39,9 @@ const BestServices = () => {
                   </span>
                 </span>
               </div>
-              <h2 className="text-black font-bold text-2xl mt-1">{service}</h2>
+              <h2 className="text-black font-bold text-xl sm:text-2xl mt-1">
+                {service}
+              </h2>
               <div className="mt-4 flex gap-x-6 gap-y-3 flex-wrap">
                 {sub_services.map((service) => (
                   <div className="flex space-x-4 items-center">
