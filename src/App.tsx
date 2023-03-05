@@ -4,6 +4,7 @@ import Features from "./components/Features";
 import BestServices from "./components/BestServices";
 import { useEffect, useState } from "react";
 import Specialist from "./components/Specialist";
+import Footer from "./components/Footer";
 
 function App() {
   const [theme, setTheme] = useState("");
@@ -28,6 +29,7 @@ function App() {
       <Features />
       <BestServices />
       <Specialist />
+      <Footer />
     </div>
   );
 }
