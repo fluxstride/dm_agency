@@ -15,7 +15,7 @@ const Specialist = () => {
           </p>
           <div className="flex flex-col gap-6 mt-11">
             {specialists_outlines.map(({ id, icon, title, text }) => (
-              <div className="sm:flex gap-4 md:w-[80%] items-start">
+              <div className="sm:flex gap-4 md:w-[80%] items-start" key={id}>
                 <img className="w-16" src={icon} alt={title} />
                 <div className="mt-4 sm:mt-0">
                   <h2 className="text-black font-bold text-xl sm:text-2xl">

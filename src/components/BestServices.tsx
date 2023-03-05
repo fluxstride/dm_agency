@@ -16,7 +16,7 @@ const BestServices = () => {
         </div>
         <div className="sm:col-span-2 md:col-span-3 flex flex-col gap-10 px-6 sm:px-0">
           {bestServices.map(({ id, service, sub_services }) => (
-            <div>
+            <div key={id}>
               <div className="flex justify-between items-center space-x-1">
                 <p className="text-4xl font-bold text-gray-100">{id}</p>
                 <span className="w-full h-[1.2px] bg-gray-100"></span>
@@ -26,13 +26,13 @@ const BestServices = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke-width="2.5"
+                      strokeWidth="2.5"
                       stroke="#fff"
                       className="w-6 h-6"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
                       />
                     </svg>
@@ -44,7 +44,7 @@ const BestServices = () => {
               </h2>
               <div className="mt-4 flex gap-x-6 gap-y-3 flex-wrap">
                 {sub_services.map((service) => (
-                  <div className="flex space-x-4 items-center">
+                  <div className="flex space-x-4 items-center" key={service}>
                     <span className="inline-block w-4 h-4 bg-yellow-deep rounded-full"></span>{" "}
                     <p className="text-gray-300">{service}</p>
                   </div>

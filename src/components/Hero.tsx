@@ -1,3 +1,5 @@
+import { metrics } from "../data/metrix";
+
 const Hero = () => {
   return (
     <div className="px-5 xl:px-24 container  mx-auto mt-[4.5rem] sm:mt-28">
@@ -33,34 +35,19 @@ const Hero = () => {
       </div>
 
       <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-10 mt-12 mb-40">
-        <div className="px-10 py-14 sm:px-12 sm:py-16 bg-blue text-center text-[#fff]">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            99%
-          </h2>
-          <p className="mb-3 font-bold">Client retetion</p>
-          <p className="text-light">100% satisfy clients in Our Work</p>
-        </div>
-        <div className="px-12 py-16 bg-peach-dark text-center text-[#fff]">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            12+
-          </h2>
-          <p className="mb-3 font-bold">Years of experience</p>
-          <p className="text-light">The world wide best experience</p>
-        </div>
-        <div className="px-12 py-16 bg-yellow-light text-center text-[#fff]">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            80+
-          </h2>
-          <p className="mb-3 font-bold">Professionals</p>
-          <p className="text-light">Best and professional our work</p>
-        </div>
-        <div className="px-12 py-16 bg-black text-center text-[#fff]">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            50M
-          </h2>
-          <p className="mb-3 font-bold">Project done</p>
-          <p className="text-light">99% succesfully all Project done</p>
-        </div>
+        {metrics.map(({ color, heading, title, text }) => (
+          <div
+            style={{ background: color }}
+            className={`px-10 py-14 sm:px-12 sm:py-16 text-center text-[#fff]`}
+            key={title}
+          >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+              {heading}
+            </h2>
+            <p className="mb-3 font-bold">{title}</p>
+            <p className="text-light">{text}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
