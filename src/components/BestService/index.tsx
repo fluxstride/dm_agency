@@ -18,7 +18,7 @@ const BestServices = () => {
           {bestServices.map(({ id, service, sub_services }) => (
             <div>
               <div className="flex justify-between items-center space-x-1">
-                <p className="text-4xl text-gray-100">{id}</p>
+                <p className="text-4xl font-bold text-gray-100">{id}</p>
                 <span className="w-full h-[1.2px] bg-gray-100"></span>
                 <span className="flex items-center">
                   <span className="p-3 bg-peach-dark rounded-full">
