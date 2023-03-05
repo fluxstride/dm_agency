@@ -10,7 +10,7 @@ const Nav = ({
   const [menuIsOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="px-5 xl:px-24 container  mx-auto  flex justify-between py-8 items-center">
+    <div className="px-5 xl:px-24 container  mx-auto  flex justify-between pt-8 items-center">
       <a href="/">
         <img src="/assets/logo.svg" alt="logo" />
       </a>

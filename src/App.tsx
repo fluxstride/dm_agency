@@ -1,8 +1,9 @@
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
-import BestServices from "./components/BestService";
+import BestServices from "./components/BestServices";
 import { useEffect, useState } from "react";
+import Specialist from "./components/Specialist";
 
 function App() {
   const [theme, setTheme] = useState("");
@@ -26,6 +27,7 @@ function App() {
       <Hero />
       <Features />
       <BestServices />
+      <Specialist />
     </div>
   );
 }

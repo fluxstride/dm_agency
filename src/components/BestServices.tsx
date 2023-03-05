@@ -1,4 +1,4 @@
-import { bestServices } from "../../data/bestServices";
+import { bestServices } from "../data/bestServices";
 
 const BestServices = () => {
   return (

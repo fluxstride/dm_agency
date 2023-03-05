@@ -1,8 +1,8 @@
 const Hero = () => {
   return (
-    <div className="px-5 xl:px-24 container  mx-auto mt-12 sm:mt-28">
+    <div className="px-5 xl:px-24 container  mx-auto mt-[4.5rem] sm:mt-28">
       <div className="lg:grid grid-cols-5 gap-7">
-        <h1 className="mb-4 lg:mb-0 text-3xl sm:text-4xl lg:text-5xl font-bold col-span-3 xl:text-6xl">
+        <h1 className="mb-4 lg:mb-0 text-3xl sm:text-4xl lg:text-5xl font-bold col-span-3 xl:text-6xl ">
           You’ve Got A Business, We Have Got Brilliant Minds
         </h1>
         <div className="col-span-2">
