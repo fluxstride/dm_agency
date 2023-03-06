@@ -10,18 +10,18 @@ const Nav = ({
   const [menuIsOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="px-5 xl:px-24 container  mx-auto  flex justify-between pt-8 items-center">
+    <div className="container mx-auto flex items-center justify-between px-5 pt-8 xl:px-24">
       <a href="/">
-        <img src="/assets/logo.svg" alt="logo" />
+        <img src="/assets/logo.svg" alt="DM.Agency" />
       </a>
       <span
-        className="p-.5 px-2 cursor-pointer"
+        className="p-.5 cursor-pointer px-2"
         onClick={() => setIsMenuOpen((prev) => !prev)}
       >
         {!menuIsOpen ? <MenuIcon /> : <CloseIcon />}
       </span>
-      <ul className="hidden lg:flex gap-16">
-        <li className="text-peach-dark font-bold text-lg">
+      <ul className="hidden gap-16 lg:flex">
+        <li className="text-lg font-bold text-peach-dark">
           <a href="">Home</a>
         </li>
         <li className="text-lg dark:text-[#fff]">
@@ -34,20 +34,20 @@ const Nav = ({
           <a href="">Blog</a>
         </li>
       </ul>
-      <div className="hidden lg:flex items-center">
+      <div className="hidden items-center lg:flex">
         <a
           href=""
-          className="font-bold text-peach-light px-8 py-2 inline-block"
+          className="inline-block px-8 py-2 font-bold text-peach-light"
         >
           Log In
         </a>
         <a
           href=""
-          className="font-black bg-peach-dark px-6 py-3 inline-block text-[#fff]"
+          className="inline-block bg-peach-dark px-6 py-3 font-black text-[#fff]"
         >
           Sign Up
         </a>
-        <svg
+        {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -65,7 +65,7 @@ const Nav = ({
             strokeLinejoin="round"
             d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
           />
-        </svg>
+        </svg> */}
       </div>
     </div>
   );

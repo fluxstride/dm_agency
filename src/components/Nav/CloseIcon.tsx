@@ -6,7 +6,7 @@ const CloseIcon = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-8 h-8 block lg:hidden"
+      className="block h-8 w-8 lg:hidden"
     >
       <path
         strokeLinecap="round"

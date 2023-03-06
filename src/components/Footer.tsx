@@ -3,11 +3,11 @@ import { footer_items } from "../data/footer_items";
 
 const Footer = () => {
   return (
-    <div className="px-5 xl:px-24  my-28">
+    <div className="my-28 px-5 xl:px-24">
       <div className="container mx-auto">
-        <div className=" bg-yellow-deep text-white px-4 py-14 sm:px-28 sm:py-20 md:flex items-center justify-between mb-28">
+        <div className="mb-28 items-center justify-between bg-yellow-deep px-4 py-14 text-white sm:px-28 sm:py-20 md:flex">
           <span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
+            <h2 className="text-2xl font-bold sm:text-3xl lg:text-4xl">
               Get Free Marketing Analysis
             </h2>
             <p className="mt-5 md:w-[80%]">
@@ -17,15 +17,15 @@ const Footer = () => {
           </span>
           <a
             href=""
-            className="text-yellow-deep bg-white py-4 px-10 font-bold inline-block mt-8 sm:mt-0"
+            className="mt-8 inline-block bg-white py-4 px-10 font-bold text-yellow-deep sm:mt-0"
           >
             Contact
           </a>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-12 text-sm lg:text-base">
+        <div className="grid grid-cols-2 gap-y-12 text-sm sm:grid-cols-3 lg:grid-cols-5 lg:text-base">
           {footer_items.map(({ type, heading, links, text }, i) => (
-            <div key={heading} className={`${i === 0 && " col-span-2"}`}>
-              <h2 className="text-xl font-bold mb-4">{heading}</h2>
+            <div key={heading} className={`${i === 0 && "col-span-2"}`}>
+              <h2 className="mb-4 text-xl font-bold">{heading}</h2>
               {type === "text" ? (
                 <p className="text-gray-300 sm:w-[80%]">{text}</p>
               ) : (

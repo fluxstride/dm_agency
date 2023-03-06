@@ -3,17 +3,17 @@ import { features } from "../data/features";
 const Features = () => {
   return (
     <div className="bg-gray-200 py-14">
-      <div className=" px-5 container mx-auto xl:px-24">
-        <h1 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold">
+      <div className="container mx-auto px-5 xl:px-24">
+        <h1 className="text-center text-2xl font-bold sm:text-3xl lg:text-4xl">
           The Best Features We Present
         </h1>
 
-        <div className="grid md:grid-cols-2 gap-6 mt-14">
+        <div className="mt-14 grid gap-6 md:grid-cols-2">
           {features.map(({ id, icon, title, text, color }) => (
             <div className="bg-white px-8 py-12 md:p-12" key={id}>
-              <img src={icon} alt="" />
-              <h2 className="mt-8 mb-4 font-bold text-xl">{title}</h2>
-              <p className="text-gray-300 mb-8">{text}</p>
+              <img src={icon} alt={title} />
+              <h2 className="mt-8 mb-4 text-xl font-bold">{title}</h2>
+              <p className="mb-8 text-gray-300">{text}</p>
               <a
                 href=""
                 style={{
@@ -28,7 +28,7 @@ const Features = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke={color}
-                  className="w-6 h-6"
+                  className="h-6 w-6"
                 >
                   <path
                     strokeLinecap="round"
