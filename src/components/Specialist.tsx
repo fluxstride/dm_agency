@@ -3,7 +3,7 @@ import { specialists_outlines } from "../data/specialist_outlines";
 const Specialist = () => {
   return (
     <div className="bg-gray-200">
-      <div className="container mx-auto grid px-5 py-16 lg:grid-cols-2 xl:px-24">
+      <div className="mx-auto grid max-w-7xl px-5 py-16 sm:px-10 lg:grid-cols-2">
         <div className="">
           <h1 className="text-2xl font-bold sm:text-3xl lg:text-4xl lg:leading-normal">
             Specialist In Aviding Clients On Financial Challenges

@@ -3,7 +3,7 @@ import { features } from "../data/features";
 const Features = () => {
   return (
     <div className="bg-gray-200 py-14">
-      <div className="container mx-auto px-5 xl:px-24">
+      <div className="mx-auto max-w-7xl px-5 sm:px-10">
         <h1 className="text-center text-2xl font-bold sm:text-3xl lg:text-4xl">
           The Best Features We Present
         </h1>

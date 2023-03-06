@@ -10,7 +10,7 @@ const Nav = ({
   const [menuIsOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="container mx-auto flex items-center justify-between px-5 pt-8 xl:px-24">
+    <div className="mx-auto flex max-w-7xl items-center justify-between px-5 pt-8 sm:px-10">
       <a href="/">
         <img src="/assets/logo.svg" alt="DM.Agency" />
       </a>

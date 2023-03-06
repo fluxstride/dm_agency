@@ -2,7 +2,7 @@ import { metrics } from "../data/metrix";
 
 const Hero = () => {
   return (
-    <div className="container mx-auto mt-[4.5rem] px-5 sm:mt-28 xl:px-24">
+    <div className="mx-auto mt-[4.5rem] max-w-7xl px-5 sm:mt-28 sm:px-10">
       <div className="grid-cols-5 gap-7 lg:grid">
         <h1 className="col-span-3 mb-4 text-3xl font-bold sm:text-4xl lg:mb-0 lg:text-5xl xl:text-6xl ">
           You’ve Got A Business, We Have Got Brilliant Minds
