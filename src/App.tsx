@@ -5,7 +5,7 @@ import BestServices from "./components/BestServices";
 import { useEffect, useState } from "react";
 import Specialist from "./components/Specialist";
 import Footer from "./components/Footer";
-import ClientReviews from "./components/ClientReviews";
+// import ClientReviews from "./components/ClientReviews";
 
 function App() {
   const [theme, setTheme] = useState("");
@@ -30,7 +30,7 @@ function App() {
       <Features />
       <BestServices />
       <Specialist />
-      <ClientReviews />
+      {/* <ClientReviews /> */}
       <Footer />
     </div>
   );
