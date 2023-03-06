@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { LegacyRef, useRef, useState } from "react";
+import { useOnClickOutside } from "../../hooks/useOnClickOutside";
 import CloseIcon from "./CloseIcon";
 import MenuIcon from "./MenuIcon";
 
@@ -8,6 +9,8 @@ const Nav = ({
   setTheme: React.Dispatch<React.SetStateAction<string>>;
 }) => {
   const [menuIsOpen, setIsMenuOpen] = useState(false);
+  const ref = useRef();
+  useOnClickOutside(ref, () => setIsMenuOpen(false));
 
   return (
     <div className="mx-auto flex max-w-7xl items-center justify-between px-5 pt-8 sm:px-10">
@@ -15,12 +18,19 @@ const Nav = ({
         <img src="/assets/logo.svg" alt="DM.Agency" />
       </a>
       <span
-        className="p-.5 cursor-pointer px-2"
+        className="p-.5 fixed top-7 right-8 z-10 cursor-pointer bg-white px-2 shadow-sm"
         onClick={() => setIsMenuOpen((prev) => !prev)}
       >
-        {!menuIsOpen ? <MenuIcon /> : <CloseIcon />}
+        {menuIsOpen ? <CloseIcon /> : <MenuIcon />}
       </span>
-      <ul className="hidden gap-16 lg:flex">
+      <ul
+        //@ts-ignore
+        ref={ref}
+        onClick={(e) => e.stopPropagation()}
+        className={`lg-px-0 fixed left-0 top-0 flex w-full transition-transform duration-300 ease-in-out ${
+          menuIsOpen ? "-translate-y-0" : "-translate-y-[100%]"
+        }  flex-col gap-4 bg-white py-8 px-4  pl-5 shadow-md sm:pl-10 lg:relative lg:w-fit lg:translate-y-0 lg:flex-row lg:gap-16 lg:bg-transparent lg:py-0 lg:pl-0 lg:shadow-none`}
+      >
         <li className="text-lg font-bold text-peach-dark">
           <a href="">Home</a>
         </li>
@@ -33,8 +43,23 @@ const Nav = ({
         <li className="text-lg dark:text-[#fff]">
           <a href="">Blog</a>
         </li>
+
+        <div className="mt-8 flex items-center gap-4 lg:hidden">
+          <a
+            href=""
+            className="block px-8 py-3 font-bold text-peach-light ring-2 ring-peach-light"
+          >
+            Log In
+          </a>
+          <a
+            href=""
+            className="block bg-peach-dark px-8 py-3 font-black text-[#fff] ring-1 ring-peach-dark"
+          >
+            Sign Up
+          </a>
+        </div>
       </ul>
-      <div className="hidden items-center lg:flex">
+      <div className="hidden items-center gap-3 lg:flex">
         <a
           href=""
           className="inline-block px-8 py-2 font-bold text-peach-light"
