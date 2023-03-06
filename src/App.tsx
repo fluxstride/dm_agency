@@ -5,6 +5,7 @@ import BestServices from "./components/BestServices";
 import { useEffect, useState } from "react";
 import Specialist from "./components/Specialist";
 import Footer from "./components/Footer";
+import Blog from "./components/Blog";
 // import ClientReviews from "./components/ClientReviews";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
       <BestServices />
       <Specialist />
       {/* <ClientReviews /> */}
+      <Blog />
       <Footer />
     </div>
   );
