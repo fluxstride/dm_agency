@@ -2,7 +2,7 @@ import { blogPosts } from "../data/blogPosts";
 
 const Blog = () => {
   return (
-    <div className="mx-auto max-w-7xl px-5 py-14 sm:px-10">
+    <div id="blog" className="mx-auto max-w-7xl px-5 py-14 sm:px-10">
       <h1 className="text-2xl font-bold sm:text-3xl lg:text-4xl lg:leading-normal">
         Our Latest Blog
       </h1>

@@ -2,7 +2,7 @@ import { bestServices } from "../data/bestServices";
 
 const BestServices = () => {
   return (
-    <div className="mx-auto max-w-7xl px-5 py-24 sm:px-10">
+    <div id="services" className="mx-auto max-w-7xl px-5 py-24 sm:px-10">
       <h1 className="mb-6 text-2xl font-bold sm:text-3xl lg:text-4xl">
         Our Best Service
       </h1>

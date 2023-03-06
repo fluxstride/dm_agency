@@ -3,6 +3,13 @@ import { useOnClickOutside } from "../../hooks/useOnClickOutside";
 import CloseIcon from "./CloseIcon";
 import MenuIcon from "./MenuIcon";
 
+const navLinks = [
+  { link: "Home", href: "" },
+  { link: "Services", href: "#services" },
+  { link: "About", href: "#about" },
+  { link: "Blog", href: "#blog" },
+];
+
 const Nav = ({
   setTheme,
 }: {
@@ -33,18 +40,17 @@ const Nav = ({
             menuIsOpen ? "-translate-y-0" : "-translate-y-[100%]"
           }  flex-col gap-4 bg-white py-8 px-4  pl-5 shadow-md sm:pl-10 lg:relative lg:w-fit lg:translate-y-0 lg:flex-row lg:gap-16 lg:bg-transparent lg:py-0 lg:pl-0 lg:shadow-none`}
         >
-          <li className="text-lg font-bold text-peach-dark">
-            <a href="">Home</a>
-          </li>
-          <li className="text-lg dark:text-[#fff]">
-            <a href="">Services</a>
-          </li>
-          <li className="text-lg dark:text-[#fff]">
-            <a href="">About</a>
-          </li>
-          <li className="text-lg dark:text-[#fff]">
-            <a href="">Blog</a>
-          </li>
+          {navLinks.map(({ link, href }, i) => (
+            <li
+              key={link}
+              className={`text-lg ${
+                i === 0 ? "font-bold text-peach-dark" : "text-black"
+              }`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <a href={href}>{link}</a>
+            </li>
+          ))}
 
           <div className="mt-8 flex items-center gap-4 lg:hidden">
             <a
@@ -66,12 +72,14 @@ const Nav = ({
         <a
           href=""
           className="inline-block px-8 py-2 font-bold text-peach-light"
+          onClick={() => setIsMenuOpen(false)}
         >
           Log In
         </a>
         <a
           href=""
           className="inline-block bg-peach-dark px-6 py-3 font-black text-[#fff]"
+          onClick={() => setIsMenuOpen(false)}
         >
           Sign Up
         </a>
