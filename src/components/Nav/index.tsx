@@ -44,7 +44,9 @@ const Nav = ({
             <li
               key={link}
               className={`text-lg ${
-                i === 0 ? "font-bold text-peach-dark" : "text-black"
+                window.location.hash === href
+                  ? "font-bold text-peach-dark"
+                  : "text-black"
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -52,16 +54,16 @@ const Nav = ({
             </li>
           ))}
 
-          <div className="mt-8 flex items-center gap-4 lg:hidden">
+          <div className="mt-5 flex items-center gap-4 sm:mt-8 lg:hidden">
             <a
               href=""
-              className="block px-8 py-3 font-bold text-peach-light ring-2 ring-peach-light"
+              className="block px-4 py-2 font-bold text-peach-light ring-2 ring-peach-light sm:px-8 sm:py-3"
             >
               Log In
             </a>
             <a
               href=""
-              className="block bg-peach-dark px-8 py-3 font-black text-[#fff] ring-1 ring-peach-dark"
+              className="block bg-peach-dark px-4 py-2 font-black text-[#fff] ring-1 ring-peach-dark sm:px-8 sm:py-3"
             >
               Sign Up
             </a>
